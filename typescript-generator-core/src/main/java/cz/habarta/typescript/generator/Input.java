@@ -130,8 +130,8 @@ public class Input {
                 }
                 if (types.isEmpty()) {
                     final String errorMessage = "No input classes found.";
-                    TypeScriptGenerator.getLogger().error(errorMessage);
-                    throw new RuntimeException(errorMessage);
+                    TypeScriptGenerator.getLogger().warning(errorMessage);
+                    //throw new RuntimeException(errorMessage);
                 }
                 return new Input(types);
             }
